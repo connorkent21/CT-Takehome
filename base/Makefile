@@ -18,6 +18,10 @@ run_command:
 
 .PHONY: test
 test:
+	python manage.py test --keepdb --parallel=1
+
+.PHONY: test_pattern
+test_pattern:
 	python manage.py test --keepdb --parallel=1 --pattern=$(PATTERN)
 
 .PHONY: shell

@@ -113,3 +113,9 @@ mutation SyncTransactions($input: SyncTransactionsInput!) {
   }
 }
 ```
+
+## Testing (Unit Tests)
+
+```
+make test
+```
