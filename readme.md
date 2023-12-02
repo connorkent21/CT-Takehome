@@ -1,5 +1,7 @@
 # CT Take Home Assignment
 
+This project is a backend API that makes use of Django + Graphql to provide an interface for managing Crypto wallets and associated addresses + transactions. I decided to go with GraphQL since it is both a very convenient way of querying an API but also makes it very easy to test the API without a client application via http://localhost:8000/graphql/.
+
 ## Getting Started
 
 from root directory:
@@ -101,17 +103,28 @@ mutation AddAddress($input: AddAddressInput!) {
   }
 }
 
+AddAddressInput: { input: { walletId: ID!, addressString: String! } }
+
+
+
 mutation RemoveAddress($input: RemoveAddressInput!) {
   removeAddress(input: $input) {
     ok
   }
 }
 
+RemoveAddressInput: { input: { addressId: ID! } }
+
+
+
 mutation SyncTransactions($input: SyncTransactionsInput!) {
   syncTransactions(input: $input) {
     ok
   }
 }
+
+SyncTransactionsInput: { input: { walletId: ID! } }
+
 ```
 
 ## Testing (Unit Tests)
