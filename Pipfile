@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+graphene-django = "*"
+blockcypher = "*"
+factory-boy = "*"
+requests = "*"
+django-filter = "*"
+graphql-core = "*"
+graphql-relay = "*"
+asyncio = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
