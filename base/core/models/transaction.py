@@ -1,6 +1,4 @@
 from django.db import models
-from core.models.wallet import Wallet
-from core.models.address import Address
 
 
 class Transaction(models.Model):

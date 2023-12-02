@@ -1,10 +1,7 @@
 from dataclasses import dataclass
 from core.models import Address, Transaction
-from blockcypher import get_address_details
-from django.core.exceptions import ValidationError
 import requests
 from copy import copy
-import asyncio
 
 
 TX_LIMIT = 100  # Max tx limit for blockchain.com multi address fetch

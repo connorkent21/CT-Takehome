@@ -1,5 +1,4 @@
 from django.db import models
-from core.models.wallet import Wallet
 
 
 class Address(models.Model):

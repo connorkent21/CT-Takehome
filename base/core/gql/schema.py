@@ -17,9 +17,6 @@ class Query(graphene.ObjectType):
     user = relay.Node.Field(UserNode)
     users = DjangoConnectionField(UserNode)
 
-    def resolve_examples(parent, _info):
-        return Example.objects.all()
-
 
 class Mutation(graphene.ObjectType):
     add_wallet = AddWallet.Field()

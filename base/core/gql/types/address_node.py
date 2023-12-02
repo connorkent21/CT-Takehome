@@ -25,7 +25,6 @@ class AddressNode(DjangoObjectType):
         return Transaction.objects.filter(address_id=parent.id)
 
     def resolve_balance(parent, _info):
-        # Should be using dataloaders to prevent N+1. Bypassing for time constraint
         address_details = get_address_overview(parent.address_string)
         if not address_details:
             return 0
